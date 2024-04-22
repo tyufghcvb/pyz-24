@@ -1,3 +1,6 @@
+import json
+
+
 class Question:
     def __init__(self, question, options, correct_answer):
         self.question = question
@@ -16,3 +19,15 @@ class Question:
             responses += f'{id + 1}) - {res}\n'
         return f"{self.question}\n{responses}"
 
+
+    # def read_from_file(file_path):
+    #     with open(file_path, 'r') as json_file:
+    #         questions = json.load(json_file)
+    #     return questions
+    #
+    # def print_from_file(questions):
+    #     for question in questions:
+    #         print(question)
+    # def convert_from_data(questions_data):
+    #     question_list = [Question(data['question'], data['options'], data['correct_answer']) for data in questions_data]
+    #     return question_list

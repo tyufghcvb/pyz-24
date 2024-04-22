@@ -2,6 +2,7 @@ from game import Game
 from hinted_game import HintGame
 from timed_game import TimedGame
 from question import Question
+from reader import Reader
 
 def play_game(game):
     print("Welcome to the Millionaire Game!\n")
@@ -35,11 +36,17 @@ def play_game(game):
 
 
 def main():
-    question_list = [
-        Question("What is the capital of France?", ["London", "Paris", "Berlin", "Madrid"], "Paris"),
-        Question("What is 2 + 2?", ["3", "4", "2", "5"], "4"),
-        Question("Who wrote 'Macbeth'?", ["Shakespeare", "Austen", "Joyce", "Hemingway"], "Shakespeare")
-    ]
+    # question_list = [
+    #     Question("What is the capital of France?", ["London", "Paris", "Berlin", "Madrid"], "Paris"),
+    #     Question("What is 2 + 2?", ["3", "4", "2", "5"], "4"),
+    #     Question("Who wrote 'Macbeth'?", ["Shakespeare", "Austen", "Joyce", "Hemingway"], "Shakespeare")
+    # ]
+
+    path_to_file = 'D:\\Questionsjson.json'
+
+    pytania = Reader.read_from_file(path_to_file)
+    # Question.print_from_file(pytania)
+    question_list = Reader.convert_from_data(pytania)
 
     while True:
         quests = """What kind of game you wanna play
