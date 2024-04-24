@@ -1,6 +1,6 @@
 # Milionaire Game
 
-1.  Dodaj dekorator `log_answers` do naszej gry, który rejestruje każdą odpowiedź użytkownika i wynik po każdym pytaniu. 
+1. Dodaj dekorator `log_answers` do naszej gry, który rejestruje każdą odpowiedź użytkownika i wynik po każdym pytaniu. 
 
 2. `@property` 
         Dekorator `@property` jest używany do tworzenia getterów i setterów Pythona. Można go użyć do zarządzania dostępem do atrybutów klasy.
@@ -10,4 +10,10 @@
         `game_instance = Game.from_json('questions.json')`
 4.  `@staticmethod `
         Dodaj metodę walidacji odpowiedzi podanej przez użytkownika, która sprawdza, czy podana odpowiedź mieści się w zakresie dostępnych opcji
-5.
+
+5. Dodaj mechanizm zapisu stanu gry
+
+6. Dodaj mechanizm zwiększający kwotę wygranej z każdym pytaniem jak w prawdziwych Milionerach
+
+
+6. Odliczanie czasu `TimedGame`. Dodaj mechanizm odliczania czasu, w tym celu zapoznaj się z działaniem na wątkach. Szczególnie z `threading.Timer` 
