@@ -49,7 +49,7 @@ def main():
             game_instance = Game(question_list)
             break
         elif selected_game == '2':
-            game_instance = HintGame(question_list)
+            game_instance = HintGame(question_list, 3)
             break
         elif selected_game == '3':
             game_instance = TimedGame(question_list, 20)
