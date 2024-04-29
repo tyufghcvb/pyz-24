@@ -1,8 +1,9 @@
 class Person:
-    def __init__(self, name, phone, email):
+    def __init__(self, name: str, phone: int, email: str):
         self.name = name
         self.phone = phone
         self.email = email
+
 
 class ContactManager:
     def __init__(self):
@@ -76,6 +77,7 @@ class ContactManager:
                 break
             else:
                 print("Invalid choice. Please try again.")
+
 
 if __name__ == "__main__":
     contact_manager = ContactManager()
