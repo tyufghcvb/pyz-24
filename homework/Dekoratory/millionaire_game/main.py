@@ -29,10 +29,10 @@ def play_game(game):
                 else:
                     print('No such option; Try again!')
 
-        #answer = input("Please enter the number of your answer: ")
-        answer = Game.correct_range_answer()
+        answer = int(input("Please enter the number of your answer: "))
+        #answer = Game.correct_range_answer()
 
-        if game.submit_answer(question.options[int(answer) - 1]):
+        if Game.is_valid(answer, question.options) and game.submit_answer(question.options[int(answer) - 1]):
             print("The correct answer --> ", question.correct_answer)
             print(f"Current score: {game.get_score()} PLN")
         else:
@@ -54,6 +54,7 @@ def main():
         selected_game = input(quests)
         if selected_game == '1':
             game_instance = Game(question_list, question_value)
+            #game_instance = Game.fromjson(question_value, 'questions.json')
             break
         elif selected_game == '2':
             game_instance = HintGame(question_list, question_value)

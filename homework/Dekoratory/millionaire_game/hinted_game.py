@@ -42,24 +42,23 @@ class HintGame(Game):
     @property
     def get_remaining_hints(self):
         # ... hints property
-        return f'Player score in total: {self.hints_allowed}'
+        return f'Player hints: {self.hints_allowed}'
 
     # @property def get_score(self): can overwrite property parents class behaviour, after chaning in values for question_value
-    # should return only int because it is a condition to
-    # @property
-    # def get_score(self):
-    #     # ... property
-    #     return f'Player score in total: {self._score}'
+    #
+    @property
+    def score(self):
+        return self._score
 
     @property
-    def get_remaining_questions(self):
+    def remaining_questions(self):
         # remaining_questions property
-        print(f"current_question_index: {self._current_question_index} ")
-        remaining_questions = 10 - (self._current_question_index)
-        remaining_questions = max(10 - (self._current_question_index), 0)
+        # print(f"current_question_index: {self._current_question_index} ")
+        # remaining_questions = 10 - (self._current_question_index)
+        remaining_questions = max(10 - self._current_question_index, 0)
         # Version for game with no defined value for each question
-        # remaining_questions = len(self.questions) - (self._current_question_index)
-        return f'To Win the Game left: {remaining_questions} questions'
+        # remaining_questions = len(self.questions) - self._current_question_index
+        return remaining_questions
 
     def save_game(self, filename='game_save.json'):
         self.game_state = {

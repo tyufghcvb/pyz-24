@@ -1,9 +1,26 @@
 from question import Question
 import json
+from typing import Union, Any, Optional
+from fileloader import load_questions_from_file
 
 
 def check_answer_correct(question, answer):
     return question.correct_answer == answer
+
+    # Zadanie 1 log_answers
+
+
+def log_answers(func):
+    def wrapper(self, *args, **kwargs):
+        print("*" * 8)
+
+        result = func(self, *args, *kwargs)
+        print(f'Your answer: ', args[0])
+        print(f'Sore: ', self._score)
+        print("*" * 8)
+        return result
+
+    return wrapper
 
 
 class Game:
@@ -19,17 +36,18 @@ class Game:
     # Zadanie 3.
     @classmethod
     def fromjson(cls, question_value, filename):
-        with open(filename, 'r') as file:
-            data = json.load(file)
-        questions = []
-        for item in data:
-            question = Question(
-                item['question'],
-                item['options'],
-                item['correct_answer'],
-                item['difficulty']
-            )
-            questions.append(question)
+        questions = load_questions_from_file(filename)
+        # with open(filename, 'r') as file:
+        #     data = json.load(file)
+        # questions = []
+        # for item in data:
+        #     question = Question(
+        #         item['question'],
+        #         item['options'],
+        #         item['correct_answer'],
+        #         item['difficulty']
+        #     )
+        #     questions.append(question)
         return cls(questions, question_value)
 
     def __str__(self):
@@ -51,7 +69,7 @@ class Game:
         else:
             raise IndexError
 
-    def get_next_question(self):
+    def get_next_question(self) -> Optional[Question]:
         if self._current_question_index < len(self.questions):
             question = self.questions[self._current_question_index]
             self._current_question_index += 1
@@ -59,20 +77,20 @@ class Game:
         else:
             return None
 
-    # Zadanie 1 log_answers
-    def log_answers(func_submit_answer):
-        def nested(self, answer):
-            result = func_submit_answer(self, answer)
-            score_log = self.get_score()
-            log = f'Given Answer {answer}, current scores {score_log} PLN'
-            self.answer_log.append(log)
-            # print(f"Logged: {self.answer_log} ")
-            return result
-
-        return nested
+    # # Zadanie 1 log_answers
+    # def log_answers(func_submit_answer):
+    #     def nested(self, answer):
+    #         result = func_submit_answer(self, answer)
+    #         score_log = self.get_score()
+    #         log = f'Given Answer {answer}, current scores {score_log} PLN'
+    #         self.answer_log.append(log)
+    #         print(f"Logged: {self.answer_log} ")
+    #         return result
+    #
+    #     return nested
 
     @log_answers
-    def submit_answer(self, answer):
+    def submit_answer(self, answer: str) -> bool:
         current_question = self.questions[self._current_question_index - 1]
         if self.check(current_question, answer):
             # Zadanie 6. Previous self._score += 100, now hierarchy question_value increased like in original game
@@ -102,6 +120,12 @@ class Game:
         while not answer.isdigit() or int(answer) not in range(1, 5):
             answer = input("Please enter a valid number of your answer in range 1-4: ")
         return int(answer)
+
+    @staticmethod
+    def is_valid(answer_number: int, options: list) -> bool:
+        return 0 < answer_number <= len(options)
+
+
 
     def save_game(self, filename='game_save.json'):
         self.game_state = {
