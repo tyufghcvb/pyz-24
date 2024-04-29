@@ -1,0 +1,212 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "options": ["London", "Paris", "Berlin", "Madrid"],
+        "correct_answer": "Paris",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is 2 + 2?",
+        "options": ["3", "4", "2", "5"],
+        "correct_answer": "4",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Who wrote 'Macbeth'?",
+        "options": ["Shakespeare", "Austen", "Joyce", "Hemingway"],
+        "correct_answer": "Shakespeare",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Venus", "Mars", "Jupiter"],
+        "correct_answer": "Mars",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "options": ["O2", "H2O", "CO2", "NaCl"],
+        "correct_answer": "H2O",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Who discovered penicillin?",
+        "options": ["Alexander Fleming", "Marie Curie", "Thomas Edison", "Albert Einstein"],
+        "correct_answer": "Alexander Fleming",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What is the largest ocean on Earth?",
+        "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        "correct_answer": "Pacific Ocean",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What year did the Titanic sink?",
+        "options": ["1912", "1905", "1898", "1923"],
+        "correct_answer": "1912",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "options": ["Vincent Van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+        "correct_answer": "Leonardo da Vinci",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": ["Gold", "Iron", "Diamond", "Quartz"],
+        "correct_answer": "Diamond",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Who is known as the 'King of Pop'?",
+        "options": ["Elvis Presley", "Michael Jackson", "Prince", "Justin Bieber"],
+        "correct_answer": "Michael Jackson",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Which instrument did Ludwig van Beethoven play?",
+        "options": ["Violin", "Guitar", "Piano", "Flute"],
+        "correct_answer": "Piano",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What music genre is associated with Bob Marley?",
+        "options": ["Rock", "Reggae", "Jazz", "Blues"],
+        "correct_answer": "Reggae",
+        "difficulty": "easy"
+    },
+        {
+        "question": "Who is often called the greatest basketball player of all time?",
+        "options": ["LeBron James", "Michael Jordan", "Kobe Bryant", "Shaquille O'Neal"],
+        "correct_answer": "Michael Jordan",
+        "difficulty": "easy"
+    },
+        {
+        "question": "What is the capital city of Poland?",
+        "options": ["Krakow", "Warsaw", "Gdansk", "Wroclaw"],
+        "correct_answer": "Warsaw",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Which Polish scientist is known for her work on radioactivity and won two Nobel Prizes?",
+        "options": ["Marie Curie", "Albert Einstein", "Isaac Newton", "Rosalind Franklin"],
+        "correct_answer": "Marie Curie",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is the traditional Polish dumpling called?",
+        "options": ["Pierogi", "Gnocchi", "Samosa", "Empanada"],
+        "correct_answer": "Pierogi",
+        "difficulty": "easy"
+    },
+        {
+        "question": "What is the largest castle in the world by land area, located in Poland?",
+        "options": ["Wawel Castle", "Malbork Castle", "Niedzica Castle", "Moszna Castle"],
+        "correct_answer": "Malbork Castle",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Which Polish city is known for hosting the international song contest Eurovision in 2023?",
+        "options": ["Krakow", "Warsaw", "Gdansk", "Lodz"],
+        "correct_answer": "Gdansk",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Which river is the longest in Poland?",
+        "options": ["Oder", "Warta", "Bug", "Vistula"],
+        "correct_answer": "Vistula",
+        "difficulty": "medium"
+    },
+        {
+        "question": "Who became the World Chess Champion in 1985 and is considered one of the greatest chess players of all time?",
+        "options": ["Bobby Fischer", "Magnus Carlsen", "Garry Kasparov", "Anatoly Karpov"],
+        "correct_answer": "Garry Kasparov",
+        "difficulty": "medium"
+    },
+    {
+        "question": "In chess, what move allows a pawn to capture an opposing pawn that has just advanced two squares from its original position, as if it had moved only one square?",
+        "options": ["En passant", "Castling", "Promotion", "Check"],
+        "correct_answer": "En passant",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Which board game, known for its strategic depth, involves capturing territory using black and white stones?",
+        "options": ["Chess", "Checkers", "Go", "Backgammon"],
+        "correct_answer": "Go",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What is the maximum number of knights that can be placed on a chessboard without any of them threatening each other?",
+        "options": ["16", "32", "8", "12"],
+        "correct_answer": "32",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Which logic puzzle involves filling a 9x9 grid with digits so that each column, each row, and each of the nine 3x3 subgrids that compose the grid contain all of the digits from 1 to 9?",
+        "options": ["Crossword", "Sudoku", "Cryptic puzzle", "Nonogram"],
+        "correct_answer": "Sudoku",
+        "difficulty": "medium"
+    },
+        {
+        "question": "Which 20th-century novel opens with the line 'All happy families are alike; each unhappy family is unhappy in its own way'?",
+        "options": ["The Great Gatsby", "Ulysses", "Anna Karenina", "The Catcher in the Rye"],
+        "correct_answer": "Anna Karenina",
+        "difficulty": "hard"
+    },
+    {
+        "question": "What is the name of the epic poem written by John Milton that explores the biblical story of the Fall of Man?",
+        "options": ["Paradise Lost", "Divine Comedy", "Beowulf", "The Waste Land"],
+        "correct_answer": "Paradise Lost",
+        "difficulty": "hard"
+    },
+    {
+        "question": "Which rock band released the influential metal album 'Master of Puppets'?",
+        "options": ["Metallica", "Slayer", "Megadeth", "Anthrax"],
+        "correct_answer": "Metallica",
+        "difficulty": "hard"
+    },
+    {
+        "question": "Who wrote 'The Flowers of Evil', a collection that became a touchstone for decadent and symbolist movements?",
+        "options": ["Charles Baudelaire", "Arthur Rimbaud", "Paul Verlaine", "Walt Whitman"],
+        "correct_answer": "Charles Baudelaire",
+        "difficulty": "hard"
+    },
+    {
+        "question": "Which band is known for pioneering the fusion of progressive rock and heavy metal, with albums such as '2112' and 'Moving Pictures'?",
+        "options": ["Rush", "Pink Floyd", "Led Zeppelin", "Black Sabbath"],
+        "correct_answer": "Rush",
+        "difficulty": "hard"
+    },
+        {
+        "question": "Which novel by Virginia Woolf tells the story of a day in the life of Clarissa Dalloway, a fictional high-society woman in post-World War I England?",
+        "options": ["To the Lighthouse", "Mrs Dalloway", "Orlando", "The Waves"],
+        "correct_answer": "Mrs Dalloway",
+        "difficulty": "hard"
+    },
+    {
+        "question": "Who wrote 'The Waste Land', a landmark modernist poem that represents the disillusionment of the post-war generation?",
+        "options": ["Ezra Pound", "T.S. Eliot", "James Joyce", "W.B. Yeats"],
+        "correct_answer": "T.S. Eliot",
+        "difficulty": "hard"
+    },
+    {
+        "question": "What is the narrative technique called that attempts to give the written equivalent of the character’s thought processes, either in a loose interior monologue, or in connection to his or her sensory impressions?",
+        "options": ["Third person omniscient", "Stream of consciousness", "First person narrative", "Free indirect discourse"],
+        "correct_answer": "Stream of consciousness",
+        "difficulty": "hard"
+    },
+    {
+        "question": "Which James Joyce novel is considered one of the most significant works of modernist literature and is noted for its deep stream of consciousness style?",
+        "options": ["Dubliners", "A Portrait of the Artist as a Young Man", "Finnegans Wake", "Ulysses"],
+        "correct_answer": "Ulysses",
+        "difficulty": "hard"
+    },
+    {
+        "question": "Which book by Franz Kafka, featuring a man who transforms into an insect, is a seminal work of existential and modernist literature?",
+        "options": ["The Trial", "Amerika", "The Castle", "The Metamorphosis"],
+        "correct_answer": "The Metamorphosis",
+        "difficulty": "hard"
+    }
+]
