@@ -64,7 +64,7 @@ class HintGame(Game):
     def save_game(self, filename='game_save.json'):
         self.game_state = {
             "game_type": "with hints",
-            "last_question_index": self._current_question_indexcurrent_index - 1,
+            "last_question_index": self._current_question_index - 1,
             "current_score": self.get_score(),
             "hints_allowed": self.hints_allowed,
             "time_remaining": 0

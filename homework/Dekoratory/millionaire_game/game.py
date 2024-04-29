@@ -91,7 +91,7 @@ class Game:
     #     return f'Player score in total: {self._score}'
 
     def is_to_save(self):
-        save = input("Please pres s and enter to save game: ")
+        save = input("Please press s and enter to save game: ")
         if save == 's':
             self.save_game()
 

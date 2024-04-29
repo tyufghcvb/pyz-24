@@ -1,7 +1,7 @@
 {
-    "game_type": "timed",
+    "game_type": "with hints",
     "last_question_index": 5,
-    "current_score": 1000,
-    "hints_allowed": 0,
+    "current_score": 2500,
+    "hints_allowed": 2,
     "time_remaining": 0
 }

@@ -38,7 +38,7 @@ class TimedGame(Game):
     def save_game(self, filename='game_save.json'):
         self.game_state = {
             "game_type": "timed",
-            "last_question_index": self._current_question_index,
+            "last_question_index": self._current_question_index - 1,
             "current_score": self.get_score(),
             "hints_allowed": 0,
             "time_remaining": self.time_limit
