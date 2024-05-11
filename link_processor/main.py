@@ -34,9 +34,11 @@ def main():
     dedicated_url = link.generate_dedicated_link(url_type, ident)
 
     print(dedicated_url)
+    #
+    # print(is_valid_url(dedicated_url))
+    #     #link.update_dedicated_links_list(dedicated_url)
 
-    if is_valid_url(dedicated_url):
-        link.update_dedicated_links_list()
+    link.update_dedicated_links_list(dedicated_url)
 
     link.show_dedicated_links_list()
     save_links_to_file(link.dedicated_links_list)

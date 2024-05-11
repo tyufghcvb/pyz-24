@@ -2,7 +2,7 @@ import re
 
 url_base = r'^https://helion\.pl/'
 
-site_pattern = r'^https?://[\w_]+\.(pl|com|edu|gov|mil|net|org|int|biz)$'
+site_pattern = r'^https?://[\w_#]+\.(pl|com|edu|gov|mil|net|org|int|biz)$'
 
 # patterns list
 
@@ -20,6 +20,8 @@ site_pattern = r'^https?://[\w_]+\.(pl|com|edu|gov|mil|net|org|int|biz)$'
 def is_valid_url(url: str) -> bool:
     if re.match(site_pattern, url):
         return bool(re.match(site_pattern, url))
+    else:
+        return False
 
 
 class LinkProcessor:
