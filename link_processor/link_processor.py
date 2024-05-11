@@ -63,13 +63,13 @@ class LinkProcessor:
             dedicated_link = url_base_dedicated_link
         # - Strona produktu →  `https: // helion.pl / view / [ID klienta] / nazwa_ksiazki `
         elif url_type == 'books':
-            dedicated_link = f'{url_base_dedicated_link}/view/{self.user_id}/{ident}'
+            dedicated_link = f'{url_base_dedicated_link}{ident}'
         # Strona promocji → `https: // helion.pl / page / [ID klienta] / promocja / promocja - xyz `
         elif url_type == 'sales':
-            dedicated_link = f'{url_base_dedicated_link}/page/{self.user_id}/promocja/{ident}'
+            dedicated_link = f'https://helion.pl/page/{self.user_id}/promocja/{ident}'
         # - Link do kategorii → `https: // helion.pl / page / [ID klienta] / kategorie / programowanie`
         elif url_type == 'category':
-            dedicated_link = f'{url_base_dedicated_link}/page/{self.user_id}/kategorie/{ident}'
+            dedicated_link = f'https://helion.pl/page/{self.user_id}/kategorie/{ident}'
         else:
             print("Something's wrong")
             return ""

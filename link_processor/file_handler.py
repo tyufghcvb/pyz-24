@@ -4,6 +4,7 @@ def save_links_to_file(urlslist):
     with open(filename, 'w') as file:
         # Write urls list to file
         for link in urlslist:
+            print(f"Link {link}")
             file.write(f"{link}\n")
 
     print(f"Successfully written to  {filename}")
