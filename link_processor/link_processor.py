@@ -17,9 +17,9 @@ patterns_dict = {
 }
 
 
-def is_valid_url(url):
+def is_valid_url(url: str) -> bool:
     if re.match(site_pattern, url):
-        return True
+        return bool(re.match(site_pattern, url))
 
 
 class LinkProcessor:
@@ -46,7 +46,6 @@ class LinkProcessor:
 
     def get_url_ident(self):
         data_pattern = r'/([^/]+)$'
-
         match = re.search(data_pattern, self.user_url)
         if match:
             ident = match.group(0)
@@ -56,21 +55,21 @@ class LinkProcessor:
             print("there is no ident")
             return ""
 
-    def generate_dedicated_link(url_type, ident, user_id):
-        url_base_dedicated_link = '{url_base}+view/user_id#'
-        dedicated_link = ''
+    def generate_dedicated_link(self, url_type: str, ident: str) -> str:
+        url_base_dedicated_link = f'{url_base}view/{self.user_id}#'
         # - Strona główna → `https: // helion.pl / ` → `https: // helion.pl / view / [ID klienta]#`
-        if url_type == url_base:
+        if url_type == 'url_base':
             dedicated_link = url_base_dedicated_link
         # - Strona produktu →  `https: // helion.pl / view / [ID klienta] / nazwa_ksiazki `
         elif url_type == 'books':
-            dedicated_link = '{url_base_dedicated_link}/view/{user_id}/{ident}'
+            dedicated_link = f'{url_base_dedicated_link}/view/{self.user_id}/{ident}'
         # Strona promocji → `https: // helion.pl / page / [ID klienta] / promocja / promocja - xyz `
         elif url_type == 'sales':
-            dedicated_link = '{url_base_dedicated_link}/page/{user_id}/promocja/{ident}'
+            dedicated_link = f'{url_base_dedicated_link}/page/{self.user_id}/promocja/{ident}'
         # - Link do kategorii → `https: // helion.pl / page / [ID klienta] / kategorie / programowanie`
         elif url_type == 'category':
-            dedicated_link = '{url_base_dedicated_link}/page/{user_id}/kategorie/{ident}'
+            dedicated_link = f'{url_base_dedicated_link}/page/{self.user_id}/kategorie/{ident}'
         else:
             print("Something's wrong")
-            dedicated_link = url_base_dedicated_link
+            return ""
+        return dedicated_link

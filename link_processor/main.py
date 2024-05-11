@@ -25,6 +25,7 @@ def main():
     link = LinkProcessor(user_id, user_url)
     url_type = link.recognize_url_type(patterns_list)
     ident = link.get_url_ident()
+    dedicated_url = link.generate_dedicated_link()
 
     #print(url_type)
 
