@@ -6,15 +6,15 @@ site_pattern = r'^https?://[\w_]+\.(pl|com|edu|gov|mil|net|org|int|biz)$'
 
 # patterns list
 
-patterns_dict = {
-    'url_base': f'url_base$',
-    # `https://helion.pl/ksiazki/nazwa_ksiazki`
-    'books': f'{url_base}ksiazki/[\w_]+$',
-    # `https://helion.pl/kategorie/programowanie'
-    'category': f'{url_base}kategorie/[\w]+$',
-    # `https://helion.pl/kategorie/promocja-xyz`
-    'sales': f'{url_base}kategorie/[\w]+-[\w]+$'
-}
+# patterns_dict = {
+#     'url_base': f'url_base$',
+#     # `https://helion.pl/ksiazki/nazwa_ksiazki`
+#     'books': f'{url_base}ksiazki/[\w_]+$',
+#     # `https://helion.pl/kategorie/programowanie'
+#     'category': f'{url_base}kategorie/[\w]+$',
+#     # `https://helion.pl/kategorie/promocja-xyz`
+#     'sales': f'{url_base}kategorie/[\w]+-[\w]+$'
+# }
 
 
 def is_valid_url(url: str) -> bool:
@@ -27,6 +27,7 @@ class LinkProcessor:
         self.user_id = user_id
         self.user_url = user_url
         self.patterns_dict = patterns_dict
+        self.dedicated_links_list = []
 
     def recognize_url_type(self, patterns):
         print(f"URL: {self.user_url}")
@@ -56,7 +57,7 @@ class LinkProcessor:
             return ""
 
     def generate_dedicated_link(self, url_type: str, ident: str) -> str:
-        url_base_dedicated_link = f'{url_base}view/{self.user_id}#'
+        url_base_dedicated_link = f'https://helion.pl/view/{self.user_id}#'
         # - Strona główna → `https: // helion.pl / ` → `https: // helion.pl / view / [ID klienta]#`
         if url_type == 'url_base':
             dedicated_link = url_base_dedicated_link
@@ -73,3 +74,13 @@ class LinkProcessor:
             print("Something's wrong")
             return ""
         return dedicated_link
+
+    def update_dedicated_links_list(self, link):
+        self.dedicated_links_list.append(link)
+        print(f'{link} attached')
+
+    def show_dedicated_links_list(self):
+        for link in self.dedicated_links_list:
+            print(f'{link}\n')
+
+
