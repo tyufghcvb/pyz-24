@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>App</title>
+</head>
+<body>
+    <h1>Camps</h1>
+    <ul>
+    {% for camp in camps %}
+        <li>{{ camp.name }} {{ camp.start_date }} {{ camp.start_date }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
